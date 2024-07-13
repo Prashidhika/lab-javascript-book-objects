@@ -36,65 +36,110 @@
 //    description: The Art of Learning takes readers through Waitzkin's unique journey to excellence. He explains in clear detail how a well-thought-out, principled approach to learning is what separates success from failure.
 // }
 
-
 // Your code here:
-const booksArray = [];
-
-
-
+const booksArray = [
+  {
+    title: "The Old Man and the Sea",
+    pages: 128,
+    author: "Ernest Hemingway",
+    details: {
+      description:
+        "One of Hemingway's most famous works, it tells the story of Santiago...",
+      language: "English",
+    },
+  },
+  {
+    title: "The Airbnb Story",
+    pages: 256,
+    author: "Leigh Gallagher",
+    details: {
+      description:
+        "This is the remarkable behind-the-scenes story of the creation and growth of Airbnb...",
+      language: "English",
+    },
+  },
+  {
+    title: "Educated - A Memoir",
+    pages: 352,
+    author: "Tara Westover",
+    details: {
+      description:
+        "Educated is an account of the struggle for self-invention...",
+      language: "English",
+    },
+  },
+  {
+    title: "The Art of Learning",
+    pages: 288,
+    author: "Josh Waitzkin",
+    details: {
+      description:
+        "The Art of Learning takes readers through Waitzkin's unique journey to excellence. He explains in clear detail how a well-thought-out, principled approach to learning is what separates success from failure.",
+      language: "English",
+    },
+  },
+];
 
 // Iteration 2 | Book Details
-function getBookDetails() {
+function getBookDetails(book) {
   // Your code here:
 
+  return `${book.title} - ${book.author} - ${book.pages} pages`;
 }
 
-
-
 // Iteration 3 | Delete Language
-// Your code here:
+// Your code here
 
+booksArray.forEach((book) => {
+  if (book.details && book.details.language);
+  {
+    delete book.details.language;
+  }
+});
 
-
+console.log(booksArray);
 
 // Iteration 4 | Estimated Reading Time
 // Your code here:
 
+let booksArray = [
+  { title: "Book 1", numberOfPages: 120 },
+  { title: "Book 2", numberOfPages: 250 },
+  { title: "Book 3", numberOfPages: 500 },
+];
 
+booksArray.forEach((book) => {
+  let readingTime = Math.ceil((book.numberOfPages * 500) / 90);
 
-
-// Bonus: Iteration 5 | Books Dictionary
+  book.readingTime = readingTime;
+});
+console.log(booksArray);
 
 /* The `dictionary` is an object containing books grouped by author. 
  The book info is stored in arrays with structure: [title, pages]. 
 */
 const dictionary = {
-    "J. K. Rowling": [
-        ["Harry Potter and the Philosopher's Stone", 223],
-        ["Harry Potter and the Chamber of Secrets", 251],
-        ["Harry Potter and the Prisoner of Azkaban", 317],
-        ["Harry Potter and the Goblet of Fire", 636],
-    ],
-    "Neal Stephenson": [
-        ["Cryptonomicon", 928],
-        ["Anathem", 1008],
-        ["Fall; or, Dodge in Hell", 896],
-    ],
-    "Malcolm Gladwell": [
-        ["Outliers", 320],
-        ["Blink", 287],
-    ],
+  "J. K. Rowling": [
+    ["Harry Potter and the Philosopher's Stone", 223],
+    ["Harry Potter and the Chamber of Secrets", 251],
+    ["Harry Potter and the Prisoner of Azkaban", 317],
+    ["Harry Potter and the Goblet of Fire", 636],
+  ],
+  "Neal Stephenson": [
+    ["Cryptonomicon", 928],
+    ["Anathem", 1008],
+    ["Fall; or, Dodge in Hell", 896],
+  ],
+  "Malcolm Gladwell": [
+    ["Outliers", 320],
+    ["Blink", 287],
+  ],
 };
 
-function booksByAuthor() {
-  // Your code here:
-  
-}
-
-
+function booksByAuthor(dictionary) {}
+// Your code here:
 
 // Bonus: Iteration 6 | Average Page Count
 function averagePageCount() {
   // Your code here:
-  
 }
